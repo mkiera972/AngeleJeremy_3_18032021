@@ -1,0 +1,169 @@
+/**
+** FICHIER DE STYLE DU SITE DE OHMYFOOD
+** @AUTEUR Jérémy ANGELE
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand:wght@300;400;500;600;700;800;900&display=swap");
+
+body{
+    width: auto;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+
+/* SECTION location */
+.location{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(240, 240, 240);
+
+    &__city{
+        padding: 0.7rem;
+        font-weight: bold;
+    }
+}
+
+/* SECTION EXPLORE RESTAURANT */
+.exploreRestau{
+    text-align: center;
+    background-color: #fafafa;
+    padding: 2.5rem;
+
+    &__title{
+        margin: 0;
+    }
+
+    &__infos{
+        font-weight: 100;
+    }
+
+    .btn__explore{
+        border: 0;
+        padding: .75rem 1.5rem;
+        font-weight: 600;
+        border-radius: 100px;
+        color: #fff;
+        background-color: #686868;
+        background-image: linear-gradient(0deg,$color_primary,$color_secondary);
+        cursor: pointer;
+        transition-duration: .25s;
+        box-shadow: 0 0 10px rgb(0 0 0 / 25%);
+
+        &:hover {
+            background-color: $color_white;
+            box-shadow: 0 0 10px rgb(0 ,0 , 0, 0.25);
+        }
+    }
+}
+
+ /* SECTION FONCTIONEMMENT */
+.operation{
+    padding: 2rem 0 2rem 0;
+
+    &__title{
+        width: 100%;
+    }
+
+    &__step{
+        display: flex;
+        padding: 1.5rem 0 1.5rem 0;
+        background-color: #f6f6f6;
+        border-radius : 20px;
+        box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 ,0 , 0, 0.10);
+        align-items: center;
+
+        .number{
+            background-color: $color_primary ;
+            border-radius: 20px;
+            padding: 0.1rem;
+            width: 20px;
+            color: $color_white;
+            text-align: center;
+            position: relative;
+            right: 10px;
+            
+        }
+        
+        i{
+            margin : 0 1.6rem 0 1rem;
+            color: #7e7e7e;
+        }
+    
+        .legende{
+            font-weight: bold;
+        }
+
+
+    }
+}
+
+
+.restaurants{
+    padding: 2rem 0 2rem 0;
+    background-color: #f6f6f6;
+    .cards{
+        .card{
+            background-color: #fff;
+            border-radius: 1rem;
+            margin: 0 0 1rem 0;
+            &__link{
+                text-decoration: none;
+                color: inherit;
+                display: block;
+                position: relative;
+            }
+            &__img{
+                border-radius: 1rem 1rem 0 0;
+            }
+            &__badge{
+                background-color: #99e2d0;
+                color: #2a6858;
+                padding: 0.3rem 0.7rem 0.3rem 0.7rem;
+                border-radius: 0.13rem;
+                position: absolute;
+                top: 1rem;
+                right: .6rem;
+                font-weight: 500;
+            }
+            &__body{
+                display: flex;
+                padding: 1rem 1rem 1rem 1rem;
+                justify-content: space-between;
+                align-items: center;
+            }
+            &__titre{
+                font-size: 1em;
+                margin: 0 0 0.5rem 0;
+            }
+            
+            /*&__icon{
+                .fa-heart {
+                    background-color: #FFF;
+                    border-radius: 50%;
+                    padding:.2em;
+                }
+                .fa-heart:before {
+                    content: "\f004";
+                    transition: color 1s ease-out;
+                }
+                .fa-heart:hover:before{
+                    color: #9356dc;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }*/
+        }
+
+    }
+}
+
