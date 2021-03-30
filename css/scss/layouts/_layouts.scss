@@ -1,76 +1,3 @@
-/* CSS SPINNER CHARGEMENT DE LA PAGE */
-.loader{
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-color: hsla(0,0%,100%,.9);
-    animation: background_spinner .01s;
-    animation-delay: 2s;
-    animation-fill-mode: both;
-    z-index: 10000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &__spinner{
-        animation:spin 3s linear;
-        border:solid 2vmin transparent;
-        border-radius:50%;
-        border-right-color:$color_primary;
-        border-top-color:$color_primary;
-        box-sizing:border-box;
-        height:20vmin;
-        left:calc(50% - 10vmin);
-        position:fixed;
-        top:calc(50% - 10vmin);
-        width:20vmin;
-        z-index:1;
-        &:before {
-          animation:spin 4s linear;
-          border:solid 2vmin transparent;
-          border-radius:50%;
-          border-right-color:$color_secondary;
-          border-top-color:$color_secondary;
-          box-sizing:border-box;
-          content:"";
-          height:16vmin;
-          left:0;
-          position:absolute;
-          top:0;
-          width:16vmin;
-        }
-        &:after {
-          animation:spin 5s linear;
-          border:solid 2vmin transparent;
-          border-radius:50%;
-          border-right-color:$color_tertiary;
-          border-top-color:$color_tertiary;
-          box-sizing:border-box;
-          content:"";
-          height:12vmin;
-          left:2vmin;
-          position:absolute;
-          top:2vmin;
-          width:12vmin;
-        
-        }
-    }
-}
-
-
-@keyframes background_spinner {
-    100% {
-        opacity: 0;
-        z-index: -10;
-    }
-}
-
-@keyframes spin {
-    100% {
-        transform:rotate(360deg);
-    }
-}
 
 /* bloc header */
 
@@ -86,12 +13,47 @@
     &__logo{
         font-family: 'Shrikhand', sans-serif;
         font-size: 25px;
-    }
-    
-    h1{
         margin: 0;
     }
+
+    &__icon{
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+
+    &__link{
+        list-style: none;
+        color: $color_black;
+    }
+
 }
+
+
+
+.btn{
+    border: 0;
+    padding: .75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 100px;
+    color: $color_white;
+    background-color: #686868;
+    cursor: pointer;
+    transition-duration: .25s;
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+
+    &.btn-degraded{
+        background-image: linear-gradient(
+            0deg
+            ,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    }
+    
+    &:hover {
+        background-color: $color_white;
+        box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
+    }
+}
+
 
 .footer{
     background-color: #353535; 
@@ -123,6 +85,4 @@
     }
 }
 
-@include mobile-only;
-@include tablette-only;
-@include desktop-plus-only;
+
