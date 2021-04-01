@@ -20,8 +20,65 @@
         font-family: "Shrikhand", sans-serif;
         font-size: 25px;
     }
+
+    &__icon{
+        position: relative;
+        height: 2rem;
+        width: 2.5rem;
+        padding: 0;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        cursor: pointer;
+        background-color: $color_black;
+        
+        &:hover::before {
+            opacity: 1;
+        }
+          
+        &::before {
+            opacity: 0;
+            transition: 0.5s;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background:linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);
+        }
+
+        .doicon{
+            transition-duration: .25s;
+            background-color: $color_light_grey;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            mix-blend-mode: lighten;
+        }
+
+        .doicon--default{
+            opacity: 1;
+        }
+
+        
+    }
+
+    &__icon:hover {
+        .doicon {
+          &--default {
+            opacity: 0;
+          }
+        }
+    }
 }
 
+/* LISTE DES MENUS */
 .listmenu{
     &__title{
         font-weight: 300;
@@ -33,7 +90,7 @@
             content: "";
             width: 2.5rem;
             height: 0.25rem;
-            background-color: #99e2d0;
+            background-color: $color_blue_sky;
             position: absolute;
             left: 0;
             bottom: 0;
@@ -61,6 +118,8 @@
             }
         }
     }
+
+    
 
     &__content{
         overflow: hidden;
@@ -99,10 +158,10 @@
         justify-content: center;
         border-radius: 100px;
         transform: rotate(
-            180deg
+            -360deg
             );
         color: $color_validator;
-        transition-duration: .5s;      
+        transition-duration: 0.7s;      
     }
 
 }
@@ -111,6 +170,7 @@
     transform: rotate(0);
 }
 
+/* DIV BUTTON COMMANDER */
 .command{
     display: flex;
     text-decoration: none;
