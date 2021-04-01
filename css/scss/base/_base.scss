@@ -27,7 +27,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(240, 240, 240);
+    background-color: $background_color_section_location;
 
     &__city{
         padding: 0.7rem;
@@ -38,7 +38,7 @@ body{
 /* SECTION EXPLORE RESTAURANT */
 .exploreRestau{
     text-align: center;
-    background-color: #fafafa;
+    background-color: $background_color_section_explore;
     padding: 2.5rem;
 
     &__title{
@@ -81,7 +81,7 @@ body{
         
         i{
             margin : 0 1.6rem 0 1rem;
-            color: #7e7e7e;
+            color: $color_icon_operation;
         }
     
         .legende{
@@ -131,25 +131,68 @@ body{
                 margin: 0 0 0.5rem 0;
             }
             
-            /*&__icon{
-                .fa-heart {
-                    background-color: #FFF;
-                    border-radius: 50%;
-                    padding:.2em;
+            &__icon{
+                position: relative;
+                height: 2rem;
+                width: 2.5rem;
+                padding: 0;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                cursor: pointer;
+                background-color: $color_black;
+                
+                &:hover::before {
+                    opacity: 1;
                 }
-                .fa-heart:before {
-                    content: "\f004";
-                    transition: color 1s ease-out;
+                  
+                &::before {
+                    opacity: 0;
+                    transition: 0.5s;
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background:linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);
                 }
-                .fa-heart:hover:before{
-                    color: #9356dc;
-                    font-weight: bold;
-                    cursor: pointer;
+
+                .doicon{
+                    transition-duration: .25s;
+                    background-color: $color_white;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    mix-blend-mode: lighten;
                 }
-            }*/
+
+                .doicon--default{
+                    opacity: 1;
+                }
+
+                
+            }
+
+            &__icon:hover {
+                .doicon {
+                  &--default {
+                    opacity: 0;
+                  }
+                }
+            }
+
+            
         }
 
     }
 }
+
+
 
 

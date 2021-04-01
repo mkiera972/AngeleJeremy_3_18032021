@@ -71,6 +71,7 @@
     transform: rotate(360deg);
   }
 }
+/*  KEYFRAMES APPARATION MENU */
 @keyframes listMenuAppear {
   0% {
     transform: scale(0);
@@ -169,22 +170,6 @@ body {
   background-color: #fff;
   border-radius: 1rem;
   margin: 0 0 1rem 0;
-  /*&__icon{
-      .fa-heart {
-          background-color: #FFF;
-          border-radius: 50%;
-          padding:.2em;
-      }
-      .fa-heart:before {
-          content: "\f004";
-          transition: color 1s ease-out;
-      }
-      .fa-heart:hover:before{
-          color: #9356dc;
-          font-weight: bold;
-          cursor: pointer;
-      }
-  }*/
 }
 .restaurants .cards .card__link {
   text-decoration: none;
@@ -215,8 +200,52 @@ body {
   font-size: 1em;
   margin: 0 0 0.5rem 0;
 }
+.restaurants .cards .card__icon {
+  position: relative;
+  height: 2rem;
+  width: 2.5rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #000000;
+}
+.restaurants .cards .card__icon:hover::before {
+  opacity: 1;
+}
+.restaurants .cards .card__icon::before {
+  opacity: 0;
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+}
+.restaurants .cards .card__icon .doicon {
+  transition-duration: 0.25s;
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: lighten;
+}
+.restaurants .cards .card__icon .doicon--default {
+  opacity: 1;
+}
+.restaurants .cards .card__icon:hover .doicon--default {
+  opacity: 0;
+}
 
-/* bloc header */
+/*  HEADER */
 .header {
   background-color: #ffffff;
   text-align: center;
@@ -242,6 +271,7 @@ body {
   color: #000000;
 }
 
+/*  BUTTON */
 .btn {
   border: 0;
   padding: 0.75rem 1.5rem;
@@ -261,6 +291,7 @@ body {
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
 }
 
+/*  FOOTER */
 .footer {
   background-color: #353535;
   padding: 1rem 0 1rem 0;
@@ -308,7 +339,52 @@ body {
   font-family: "Shrikhand", sans-serif;
   font-size: 25px;
 }
+.menu__icon {
+  position: relative;
+  height: 2rem;
+  width: 2.5rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #000000;
+}
+.menu__icon:hover::before {
+  opacity: 1;
+}
+.menu__icon::before {
+  opacity: 0;
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+}
+.menu__icon .doicon {
+  transition-duration: 0.25s;
+  background-color: #f6f6f6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: lighten;
+}
+.menu__icon .doicon--default {
+  opacity: 1;
+}
+.menu__icon:hover .doicon--default {
+  opacity: 0;
+}
 
+/* LISTE DES MENUS */
 .listmenu__title {
   font-weight: 300;
   font-size: 1em;
@@ -376,15 +452,16 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 100px;
-  transform: rotate(180deg);
+  transform: rotate(-360deg);
   color: #99e2d0;
-  transition-duration: 0.5s;
+  transition-duration: 0.7s;
 }
 
 .listmenu__item:hover .listmenu__validator i {
   transform: rotate(0);
 }
 
+/* DIV BUTTON COMMANDER */
 .command {
   display: flex;
   text-decoration: none;
