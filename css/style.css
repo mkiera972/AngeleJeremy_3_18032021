@@ -160,6 +160,9 @@ body {
 .operation__step .legende {
   font-weight: bold;
 }
+.operation__step:hover i {
+  color: #9356DC;
+}
 
 /* SECTION RESTAURANTS */
 .restaurants {
